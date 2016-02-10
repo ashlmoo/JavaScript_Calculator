@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+	<title>Welcome</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div>
+		<p>Enter the current year here</p>
+		<input id="currentDate" type="text"></input> <!-- User input field for the current date -->
+	</div>
+	
+	<div> 
+		<p>Enter the year you were born here</p>
+		<input id="birthYear" type="text"></input> <!-- User input field for the birth year -->
+	</div>
+
+	<p id="cAge"></p>  <!-- Where the current year is printed. I thought this id went after the "=" but it actually goes in the ("...") after the document.getElementById method -->
+	<p id="bAge"></p>
+	<p id="sum"></p>
+	
+	<button onclick="sumFunction()">Do it</button>
+	
+	<script type="text/javascript">
+			function sumFunction() {
+			var bYear = document.getElementById("cAge").innerHTML = birthYear.value; // Variable defined to pull user input for current year
+			
+			var cYear = document.getElementById("bAge").innerHTML = currentDate.value; // Variable defined to pull user input for birth year
+			
+			var sum = cYear - bYear; // Variable defined which subtracts the two above user inputs
+			
+	    document.getElementById("cAge").innerHTML = "If the current year is " + cYear + ","; // Prints user input inside the paragraph tag with the applicable id "cAge".
+			
+			document.getElementById("bAge").innerHTML = "and your birth year was " + bYear + " then"; // Prints user input inside the paragraph tag with the applicable id "bAge".
+			
+			document.getElementById("sum").innerHTML = "you will be " + sum + " years old this year!"; // Prints user input inside the paragraph tag with the applicable id "sum".
+		}
+		
+	</script>
+	
+</body>
+</html>
